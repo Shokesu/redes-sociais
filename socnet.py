@@ -391,7 +391,7 @@ def build_closeness(g):
 
 
 def build_betweenness(g):
-    betweenness = networkx.betweenness_centrality(g, normalized=False)
+    betweenness = networkx.betweenness_centrality(g)
 
     for n in betweenness:
         g.nodes[n]['theoretical_betweenness'] = betweenness[n]
